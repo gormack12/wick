@@ -16,9 +16,16 @@ class SkillRepository
 		$this->model = $skill;
 	}
 
+	public function getSkills()
+	{
+		return $this->model->select('name')
+							->get();
+	}
+
 	public function getProgrammingLanguages()
 	{
-		$programming_language = $this->model->where('genre', '=', 'programming language')
+		$programming_language = $this->model->select('name')
+											->where('genre', '=', 'programming language')
 											->get();
 		return $programming_language;
 	}

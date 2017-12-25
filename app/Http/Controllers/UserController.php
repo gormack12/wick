@@ -27,10 +27,8 @@ class UserController extends Controller
     {
     	$user = $this->userRepository->getUserById($id);
     	
-    	$programming_languages = $skillRepository->getProgrammingLanguages();
-    	$dbms = $skillRepository->getDbms();
-    	$frameworks = $skillRepository->getFrameworks();
-    	$mobile_os = $skillRepository->getMobileOs();
-    	return view('edit-profile', compact('user', 'programming_languages', 'dbms', 'frameworks', 'mobile_os'));
+    	$skills = $skillRepository->getSkills();
+
+    	return view('edit-profile', compact('user', 'skills'));
     }
 }

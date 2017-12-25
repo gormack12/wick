@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <div class="app">
+    <div id="app" class="app">
         
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -44,7 +44,7 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Déconnxion
+                                            Déconnexion
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
